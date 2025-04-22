@@ -1,0 +1,18 @@
+.timerContainer {
+    background-color: rgba(20, 20, 20, 0.37);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    width: 100%;
+    max-width: 700px;
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: relative;
+    transition: all 0.3s ease;
+    border: 4px dashed #4747471e;
+    &:hover {
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+    }
+}
