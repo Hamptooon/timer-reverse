@@ -1,0 +1,82 @@
+@use "sass:color";
+.timerForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    label {
+        font-weight: 600;
+    }
+}
+
+.inputWithControls {
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.timeInput {
+    flex: 1;
+    padding: 0.75rem;
+    border: none;
+    text-align: center;
+    font-size: 1.2rem;
+    width: 100%;
+    outline: none;
+
+    border: 4px dashed #4747471e;
+    background-color: #2b2b2b0a;
+    color: whitesmoke;
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+}
+
+.controlButton {
+    background-color: #2b2b2b;
+    border: none;
+    padding: 0.75rem 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    color: whitesmoke;
+    &:hover {
+        background-color: color.adjust(#5e5e5e, $lightness: -10%);
+    }
+
+    &:active {
+        background-color: color.adjust(#5f5f5f, $lightness: -20%);
+    }
+}
+
+.setButton {
+    background-color: #2b2b2b00;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: transform background-color 0.3s;
+    border: 4px dashed #4747471e;
+    color: whitesmoke;
+    &:hover {
+        transform: translateY(-2px);
+        background-color: #2b2b2b79;
+    }
+
+    &:active {
+        transform: translateY(1px);
+    }
+}
