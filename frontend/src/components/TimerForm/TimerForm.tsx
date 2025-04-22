@@ -1,4 +1,3 @@
-// File: src/components/TimerForm/TimerForm.tsx
 import React from "react";
 import * as styles from "./TimerForm.module.scss";
 

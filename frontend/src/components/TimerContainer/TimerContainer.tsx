@@ -1,5 +1,4 @@
-// File: src/components/TimerContainer/TimerContainer.tsx
-import React, { useState, useEffect, useLayoutEffect } from "react";
+import React, { useState, useEffect } from "react";
 import TimerForm from "../TimerForm/TimerForm";
 import TimerDisplay from "../TimerDisplay/TimerDisplay";
 import TimerControls from "../TimerControls/TimerControls";
@@ -19,10 +18,6 @@ const TimerContainer: React.FC = () => {
                 isActive: savedIsActive,
                 lastUpdated: savedLastUpdated,
             } = JSON.parse(savedState);
-            console.log(
-                "Сохраненное состояние таймера:",
-                Date.now() - savedLastUpdated
-            );
             if (savedIsActive) {
                 const elapsed = (Date.now() - savedLastUpdated) / 1000;
                 const newTime = Math.max(Math.ceil(savedTime - elapsed), 0);
@@ -44,7 +39,6 @@ const TimerContainer: React.FC = () => {
             lastUpdated: Date.now(),
         };
         localStorage.setItem("timerState", JSON.stringify(state));
-        console.log("Состояние таймера сохранено:", state);
     }, [timeInSeconds, isActive]);
 
     useEffect(() => {
