@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import * as styles from "./TimerAlert.module.scss";
 
 interface TimerAlertProps {
